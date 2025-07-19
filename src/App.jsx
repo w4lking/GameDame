@@ -1,12 +1,19 @@
 import { useState } from 'react'
+import NavBar from './components/layout/NavBar'
+import Footer from './components/layout/Footer'
+import './App.css' 
 
 function App() {
-
   return (
-    <div>
-      <h1>Welcome to GameDame</h1>
-      <p>Your one-stop solution for all gaming needs!</p>
-    </div>
+    <>
+      <NavBar />
+
+      <main>
+        <h1>Welcome to GameDame</h1>
+      </main>
+
+      <Footer />
+    </>
   )
 }
 
