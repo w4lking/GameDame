@@ -1,5 +1,5 @@
 
-import authImage from '../../assets/images/mago_image';
+import authImage from '../../assets/images/mago_image.png';
 
 function AuthLayout({ children }) {
     return (

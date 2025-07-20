@@ -1,20 +1,15 @@
-import { useState } from 'react'
-import NavBar from './components/layout/NavBar'
-import Footer from './components/layout/Footer'
-import './App.css' 
+// 1. Importe o Outlet aqui
+import { Outlet } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
     <>
-      <NavBar />
-
       <main>
-        <h1>Welcome to GameDame</h1>
+        <Outlet />
       </main>
-
-      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
