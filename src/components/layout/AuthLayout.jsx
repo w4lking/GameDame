@@ -1,13 +1,14 @@
 
+import styles from './AuthLayout.module.css';
 import authImage from '../../assets/images/mago_image.png';
 
 function AuthLayout({ children }) {
     return (
-        <div className="auth-container">
-            <div className="auth-form-section">
+        <div className={styles.authContainer}>
+            <div className={styles.authFormSection}>
                 {children}
             </div>
-            <div className="auth-image-section">
+            <div className={styles.authImageSection}>
                 <img src={authImage} alt="Imagem de Mago" />
             </div>
         </div>

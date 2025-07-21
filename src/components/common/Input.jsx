@@ -1,4 +1,5 @@
-import React from 'react';
+
+import styles from './Input.module.css'; 
 
 function Input({ type = 'text', placeholder = '', value, onChange, className = '' }) {
   return (
@@ -7,7 +8,7 @@ function Input({ type = 'text', placeholder = '', value, onChange, className = '
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className={`input ${className}`}
+      className={`${styles.input} ${className}`} 
     />
   );
 }
