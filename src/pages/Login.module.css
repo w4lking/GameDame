@@ -34,20 +34,6 @@
   width: 80%;
 }
 
-.submitButton {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #4B626C;
-  transition: transform 0.2s ease;
-}
-
-.submitButton:hover {
-  transform: scale(1.1);
-}
-
 
 .links {
   display: flex;

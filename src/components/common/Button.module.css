@@ -1,0 +1,27 @@
+/* src/components/common/Button.module.css */
+
+.button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #4B626C;
+  transition: transform 0.2s ease;
+  
+  /* Adicionado para garantir que o alinhamento do ícone/texto dentro dele seja bom */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove padding padrão para que pareça só o ícone/texto */
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:disabled {
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+}

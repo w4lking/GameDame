@@ -1,13 +1,14 @@
 
+import styles from './Button.module.css'; 
 
-function Button ({ label, onClick, disabled = false }) {
+function Button({ children, onClick, disabled = false, type = 'button', className = '' }) {
   return (
     <button
+      type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`btn ${disabled ? 'btn-disabled' : 'btn-active'}`}
-    >
-      {label}
+      className={`${styles.button} ${className}`}>
+      {children}
     </button>
   );
 }

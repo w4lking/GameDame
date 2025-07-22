@@ -2,9 +2,10 @@
 import styles from './Register.module.css';
 import AuthLayout from '../components/layout/AuthLayout';
 import InputCommon from '../components/common/Input';
+import ButtonCommon from "../components/common/Button";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 function RegisterPage() {
   const [name, setName] = useState('');
@@ -55,7 +56,9 @@ function RegisterPage() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
-            <button type="submit" className={styles.submitButton}><FaArrowRight /></button>
+            <ButtonCommon type="submit">
+              <ArrowForwardIcon fontSize="large" />
+            </ButtonCommon>
 
           </form>
         </div>
