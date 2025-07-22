@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/login", element: <LoginPage /> },
-      { path: "/register", element: <RegisterPage /> },
+      { path: "/", element: <RegisterPage /> },
       // { path: "/recover-password", element: <RecoverPassPage /> },
     ],
   },

@@ -1,8 +1,7 @@
-// LoginPage.jsx - Nova Estrutura
 
 import styles from './Login.module.css';
 import AuthLayout from '../components/layout/AuthLayout';
-import Input from '../components/common/Input';
+import InputCommon from '../components/common/Input';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
@@ -23,14 +22,14 @@ function LoginPage() {
         <div className={styles.mainContent}>
           <h2 className={styles.title}>Login</h2>
           <form className={styles.form} onSubmit={handleSubmit}>
-            <Input 
+            <InputCommon
               type="email" 
               placeholder="E-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Input 
-              type="password" 
+            <InputCommon
+              type="password"
               placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -41,7 +40,7 @@ function LoginPage() {
         </div>
         
         <div className={styles.links}>
-          <Link to="/register">Criar Conta</Link>
+          <Link to="/">Criar Conta</Link>
           <Link to="/recover-password">Esqueceu a Senha?</Link>
         </div>
       </div>
