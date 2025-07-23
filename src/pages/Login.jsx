@@ -1,49 +1,41 @@
-import styles from "./Login.module.css";
-import AuthLayout from "../components/layout/AuthLayout";
-import InputCommon from "../components/common/Input";
-import ButtonCommon from "../components/common/Button";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+
+
+import AuthLayout from '../components/layout/AuthLayout';
+import AuthFormContainer from '../components/layout/AuthFormContainer';
+import Input from '../components/common/Input'; 
+import Button from "../components/common/Button"; 
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
+
+import styles from './Login.module.css'; 
+
 function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("tentativa de login:", { email, password });
+    console.log('tentativa de login:', { email, password });
   };
+
+  const pageLinks = (
+    <Link to="/">Criar Conta</Link>
+  );
 
   return (
     <AuthLayout>
-      <div className={styles.loginContainer}>
-        <div className={styles.mainContent}>
-          <h2 className={styles.title}>Login</h2>
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <InputCommon
-              type="email"
-              placeholder="E-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <InputCommon
-              type="password"
-              placeholder="Senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <ButtonCommon type="submit">
-              <ArrowForwardIcon fontSize="large" />
-            </ButtonCommon>
-          </form>
-        </div>
-
-        <div className={styles.links}>
-          <Link to="/">Criar Conta</Link>
-          <Link to="/recover-password">Esqueceu a Senha?</Link>
-        </div>
-      </div>
+      <AuthFormContainer title="Login" links={pageLinks}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          
+          <Button type="submit" className={styles.submitButton}>
+            <ArrowForwardIcon fontSize="large" />
+          </Button>
+        </form>
+      </AuthFormContainer>
     </AuthLayout>
   );
 }

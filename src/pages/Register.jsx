@@ -1,11 +1,15 @@
 
-import styles from './Register.module.css';
+
 import AuthLayout from '../components/layout/AuthLayout';
-import InputCommon from '../components/common/Input';
-import ButtonCommon from "../components/common/Button";
+import AuthFormContainer from '../components/layout/AuthFormContainer'; 
+import Input from '../components/common/Input'; 
+import Button from "../components/common/Button"; 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+
+import styles from './Register.module.css'; 
 
 function RegisterPage() {
   const [name, setName] = useState('');
@@ -16,57 +20,31 @@ function RegisterPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('tentativa de login:', { email, password });
+    console.log('tentativa de registro:', { name, email });
   };
+
+  const pageLinks = (
+    <>
+      <Link to="/login">Fazer login</Link>
+      <Link to="/recover-password">Esqueceu a Senha?</Link>
+    </>
+  );
 
   return (
     <AuthLayout>
-      <div className={styles.registerContainer}>
-
-        <div className={styles.mainContent}>
-          <h2 className={styles.title}>Registrar</h2>
+      <AuthFormContainer title="Registrar" links={pageLinks}>
         <form className={styles.form} onSubmit={handleSubmit}>
-            <InputCommon
-              type="text"
-              placeholder="Nome"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <InputCommon
-              type="email" 
-              placeholder="E-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <InputCommon
-              type="text"
-              placeholder="CPF"
-              value={cpf}
-              onChange={(e) => setCpf(e.target.value)}
-            />
-            <InputCommon
-              type="password"
-              placeholder="Senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <InputCommon
-              type="password"
-              placeholder="Confirmar Senha"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            <ButtonCommon type="submit">
-              <ArrowForwardIcon fontSize="large" />
-            </ButtonCommon>
-
-          </form>
-        </div>
-        
-        <div className={styles.links}>
-          <Link to="/login">Fazer login</Link>
-        </div>
-      </div>
+          <Input placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} />
+          <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Input placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)} />
+          <Input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Input type="password" placeholder="Confirmar Senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+          
+          <Button type="submit" className={styles.submitButton}>
+            <ArrowForwardIcon fontSize="large" />
+          </Button>
+        </form>
+      </AuthFormContainer>
     </AuthLayout>
   );
 }
