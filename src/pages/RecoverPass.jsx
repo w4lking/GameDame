@@ -19,7 +19,7 @@ function RecoverPass() {
 
   const pageLinks = (
     <>
-      <Link to="/register">Criar Conta</Link>
+      <Link to="/">Criar Conta</Link>
       <Link to="/login">Fazer login</Link>
     </>
   );
