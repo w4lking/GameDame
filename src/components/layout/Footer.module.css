@@ -1,0 +1,114 @@
+
+.footer {
+  background-color: #4B626C;
+  color: #f0f0f0;
+  padding: 3rem 2rem 1rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.footerBrand img {
+  height: 60px;
+  border-radius: 10%;
+}
+
+.footerBrand h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.footerBrand p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footerLinks, .footerContact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footerLinks h2, .footerContact h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footerLinks ul, .footerContact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li, .footerContact li {
+  margin-bottom: 0.5rem;
+}
+
+.footerLinks a, .footerContact a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.footerLinks a:hover, .footerContact a:hover {
+  color: #fff;
+}
+
+.footerDues {
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #6c7a81;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+
+/* ##### RESPONSIVIDADE ###### */
+@media (max-width: 779px) {
+  .footerContent {
+    flex-direction: row;  
+    justify-content: center; 
+    text-align: center; 
+  }
+
+  .footerBrandInfo{
+    display: none;
+  }
+
+  .footerContactTitle {
+    display: none;
+  }
+
+  .footerLinks {
+    display: none;
+  }
+
+  .footerBrand img {
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .footerContact ul {
+    text-align: left;
+  }
+}
