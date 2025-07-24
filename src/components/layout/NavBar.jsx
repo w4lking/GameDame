@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './NavBar.module.css';
 import icone from '../../assets/images/perfil_icone.png'; 
 import SearchIcon from '@mui/icons-material/Search'; 
-import MenuIcon from '@mui/icons-material/Menu'; Menu
+import MenuIcon from '@mui/icons-material/Menu'; 
 import CloseIcon from '@mui/icons-material/Close'; 
 
 function NavBar() {
