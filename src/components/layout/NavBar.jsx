@@ -12,12 +12,12 @@ function NavBar() {
 
   return (
     <nav className={styles.navContainer}>
-      <Link to="/" className={styles.logo}>
+      <Link to="/login" className={styles.logo}>
         <img src={icone} alt="Logotipo Game Dame" />
       </Link>
 
       <ul className={`${styles.navList} ${isMenuOpen ? styles.menuOpen : ''}`}>
-        <li><Link to="/launches" onClick={() => setIsMenuOpen(false)}>Lançamentos</Link></li>
+        <li><Link to="/home" onClick={() => setIsMenuOpen(false)}>Lançamentos</Link></li>
         <li><Link to="/popular" onClick={() => setIsMenuOpen(false)}>Populares</Link></li>
         <li><Link to="/genres" onClick={() => setIsMenuOpen(false)}>Gêneros</Link></li>
         <li><Link to="/promotions" onClick={() => setIsMenuOpen(false)}>Promoções</Link></li>
