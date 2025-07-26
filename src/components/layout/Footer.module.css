@@ -8,7 +8,7 @@
 
 .footerContent {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
@@ -17,11 +17,16 @@
 }
 
 .footerBrand {
-  display: flex;
+
   align-items: center;
   gap: 1rem;
   flex: 1;
-  min-width: 250px;
+  min-width: 300px;
+}
+
+.footerBrandInfo {
+  display: flex;
+  flex-direction: column;
 }
 
 .footerBrand img {
@@ -103,7 +108,7 @@
   }
 
   .footerBrand img {
-    max-width: 70%;
+    max-width: 40%;
     height: auto;
     object-fit: contain;
   }
