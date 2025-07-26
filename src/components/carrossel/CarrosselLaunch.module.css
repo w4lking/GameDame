@@ -64,6 +64,7 @@
 /* -- Estilos para as setas -- */
 :global(.slick-arrow) {
   border-radius: 50%;
+  background-color: #333;
   z-index: 1;
   width: 30px;
   height: 30px;
