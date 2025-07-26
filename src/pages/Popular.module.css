@@ -1,0 +1,121 @@
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem 4rem
+}
+
+.pageTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.gameRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+/* Use :nth-of-type para contar apenas os elementos .gameRow, ignorando o h1 */
+.gameRow:nth-of-type(even) .imageContainer {
+  order: 2; 
+}
+
+.gameRow:nth-of-type(even) .descriptionContainer {
+  order: 1; 
+}
+
+.imageContainer {
+  flex: 1; 
+  min-width: 300px;
+  position: relative;
+}
+
+.imageContainer img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.rank {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: #4B626C;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 3px solid white;
+}
+
+.descriptionContainer {
+  flex: 2;
+}
+
+.descriptionContainer h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #222;
+}
+
+.descriptionContainer p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.floatingCartButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #4B626C;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.floatingCartButton:hover {
+  transform: scale(1.1);
+}
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+  .mainContent {
+    padding: 1.5rem;
+  }
+  
+  .gameRow, .gameRow:nth-child(even) {
+    flex-direction: column; 
+  }
+  
+  .gameRow:nth-child(even) .imageContainer,
+  .gameRow:nth-child(even) .descriptionContainer {
+    order: initial; 
+  }
+}

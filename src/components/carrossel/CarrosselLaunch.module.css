@@ -47,12 +47,10 @@
 
 /* -- Estilos para as setas  -- */
 :global(.slick-arrow) {
-  background-color: rgba(255, 255, 255, 0.9) !important;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 :global(.slick-arrow:hover) {
   background-color: white !important;
