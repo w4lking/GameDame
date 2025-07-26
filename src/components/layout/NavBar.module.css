@@ -95,15 +95,24 @@
 
 @media (max-width: 1245px) {
   .navList li {
-    font-size: 15px; 
+    font-size: 20px; 
+  }
+
+  .navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0;
+    margin-left: 30px;
+  }
+
+  .searchBar input {
+    font-size: 12px;
+    width: 100px;
   }
 }
 
-@media (max-width: 1000px){
-  .searchBar input {
-    font-size: 12px;
-  }
-}
 
 /* ########## RESPONSIVIDADE ########## */
 

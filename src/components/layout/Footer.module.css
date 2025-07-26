@@ -1,6 +1,6 @@
 
 .footer {
-  background-color: #4B626C;
+  background-color: #97A4A2;
   color: #f0f0f0;
   padding: 3rem 2rem 1rem 2rem;
   font-family: 'Montserrat', sans-serif;
@@ -114,6 +114,6 @@
   }
 
   .footerContact ul {
-    text-align: left;
+    text-align: center;
   }
 }
