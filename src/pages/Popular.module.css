@@ -5,9 +5,10 @@
   min-height: 100vh;
 }
 
+
 .mainContent {
-  flex-grow: 1;
-  padding: 2rem 4rem
+  flex-grow: 1; 
+  padding: 2rem 4rem; 
 }
 
 .pageTitle {
@@ -29,13 +30,12 @@
 }
 
 
-/* Use :nth-of-type para contar apenas os elementos .gameRow, ignorando o h1 */
 .gameRow:nth-of-type(even) .imageContainer {
   order: 2; 
 }
 
 .gameRow:nth-of-type(even) .descriptionContainer {
-  order: 1; 
+  order: 1;
 }
 
 .imageContainer {
@@ -81,28 +81,11 @@
   color: #555;
 }
 
-.floatingCartButton {
+.cartButton {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
-  width: 60px;
-  height: 60px;
-  background-color: #4B626C;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  right: 1rem;
 }
-
-.floatingCartButton:hover {
-  transform: scale(1.1);
-}
-
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 900px) {

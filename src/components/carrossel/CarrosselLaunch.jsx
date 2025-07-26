@@ -1,6 +1,8 @@
 
 import Slider from "react-slick";
 import styles from "./CarrosselLaunch.module.css";
+import FloatingButton from "../common/FloatingButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 
 import BobEsponja from "../../assets/images/bobEsponjaImage.png";
@@ -11,30 +13,24 @@ import DeathStranding from "../../assets/images/deathStrandingImage.png";
 
 export default function LancamentosCarousel() {
   const settingsLancamentos = {
-    dots: false, 
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: true,
-    slidesToShow: 5, 
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1200, 
-        settings: {
-          slidesToShow: 4, 
-        },
+        breakpoint: 1200,
+        settings: { slidesToShow: 4 },
       },
       {
         breakpoint: 820,
-        settings: {
-          slidesToShow: 3, 
-        },
+        settings: { slidesToShow: 3 },
       },
       {
-        breakpoint: 600, 
-        settings: {
-          slidesToShow: 2, 
-        },
+        breakpoint: 600,
+        settings: { slidesToShow: 2 },
       },
     ],
   };
@@ -64,6 +60,13 @@ export default function LancamentosCarousel() {
           <span className={styles.cardPrice}>R$ 299,00</span>
         </div>
       </Slider>
+
+      <FloatingButton
+        className={styles.cartButton}
+        aria-label="Ver carrinho"
+      >
+        <ShoppingCartIcon />
+      </FloatingButton>
     </div>
   );
 }
