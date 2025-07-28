@@ -7,7 +7,8 @@
   padding: 0.5rem 1rem;
   background-color: #FBF6F0;
   border-bottom: 1px solid #ccc;
-  position: relative; 
+  position: sticky; 
+  top: 0;
   z-index: 100; 
 }
 

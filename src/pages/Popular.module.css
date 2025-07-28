@@ -1,14 +1,8 @@
 
-.pageWrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-.mainContent {
-  flex-grow: 1; 
-  padding: 2rem 4rem; 
+.container {
+  width: 100%;            
+  margin: 0 auto;         
+  padding: 2rem 1.5rem;    
 }
 
 .pageTitle {

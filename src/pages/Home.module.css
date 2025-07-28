@@ -1,15 +1,12 @@
-/* HomePage.module.css */
 
-.homeLayout {
+.carouselsContainer {
   display: flex;
-  gap: 2rem; /* Cria um espaço entre as duas colunas */
+  flex-wrap: wrap; 
+  gap: 2rem;
+  padding: 2rem; 
 }
 
-.sliderColumn {
-  width: 70%; /* Define que o slider ocupará 70% da largura */
-  flex-shrink: 0; /* Impede que a coluna do slider encolha */
-}
-
-.sidebarColumn {
-  width: 30%; /* Define que a coluna lateral ocupará 30% */
+.carouselWrapper {
+  flex: 1; 
+  min-width: 400px; 
 }
