@@ -1,4 +1,4 @@
-// 1. Importe o Outlet aqui
+
 import { Outlet } from 'react-router-dom';
 import './App.css';
 

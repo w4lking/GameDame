@@ -1,8 +1,8 @@
 
 import AuthLayout from '../components/layout/AuthLayout';
 import AuthFormContainer from '../components/layout/AuthFormContainer'; 
-import Input from '../components/common/Input'; 
-import Button from "../components/common/Button"; 
+import Input from '../components/common/Input/index'; 
+import Button from "../components/common/Button/index"; 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";

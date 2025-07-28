@@ -8,6 +8,7 @@ import Popular from './pages/Popular.jsx';
 import LoginPage from './pages/Login.jsx';
 import RegisterPage from './pages/Register.jsx';
 import RecoverPassPage from './pages/RecoverPass.jsx';
+import ShoppingCart from './pages/ShoppingCart.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "/recover-password", element: <RecoverPassPage /> },
       { path: "/home", element: <Home /> },
       { path: "/popular", element: <Popular /> },
+      { path: "/cart", element: <ShoppingCart /> },
     ],
   },
 ]);

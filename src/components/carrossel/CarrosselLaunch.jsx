@@ -1,7 +1,7 @@
 
 import Slider from "react-slick";
 import styles from "./CarrosselLaunch.module.css";
-import FloatingButton from "../common/FloatingButton";
+import FloatingButton from "../common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 

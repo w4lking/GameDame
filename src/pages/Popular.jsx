@@ -2,7 +2,7 @@
 import styles from "./Popular.module.css";
 import NavBar from "../components/layout/NavBar";
 import Footer from "../components/layout/Footer";
-import FloatingButton from "../components/common/FloatingButton";
+import FloatingButton from "../components/common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import Gow from "./../assets/images/gowImage.png";
