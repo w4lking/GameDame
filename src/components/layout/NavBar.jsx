@@ -17,7 +17,7 @@ function NavBar() {
       </Link>
 
       <ul className={`${styles.navList} ${isMenuOpen ? styles.menuOpen : ''}`}>
-        <li><Link to="/home" onClick={() => setIsMenuOpen(false)}>Lançamentos</Link></li>
+        <li><Link to="/releases" onClick={() => setIsMenuOpen(false)}>Lançamentos</Link></li>
         <li><Link to="/popular" onClick={() => setIsMenuOpen(false)}>Populares</Link></li>
         <li><Link to="/genres" onClick={() => setIsMenuOpen(false)}>Gêneros</Link></li>
         <li><Link to="/promotions" onClick={() => setIsMenuOpen(false)}>Promoções</Link></li>

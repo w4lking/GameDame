@@ -19,7 +19,7 @@ function LoginPage() {
     console.log('tentativa de login:', { email, password });
     // Aqui você pode adicionar a lógica de autenticação
     // Por exemplo, chamar uma API de login e lidar com a resposta
-    window.location.href = '/home';
+    window.location.href = '/releases';
     
   };
 

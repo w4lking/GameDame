@@ -167,6 +167,4 @@ input[type="checkbox"]:checked + .checkboxSquare::after {
     align-items: center;
   }
 
-
-
 }

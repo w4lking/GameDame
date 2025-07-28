@@ -1,10 +1,10 @@
-import NavBar from "../components/layout/NavBar";
-import Footer from "../components/layout/Footer";
+import NavBar from "../components/layout/NavBar.jsx";
+import Footer from "../components/layout/Footer.jsx";
 import Carrossel from "../components/carrossel/carrossel.jsx";
 import CarrosselLaunch from "../components/carrossel/CarrosselLaunch.jsx";
-import styles from "./Home.module.css"; 
+import styles from "./Releases.module.css"; 
 
-function HomePage() {
+function ReleasesPage() {
   return (
 
     <div className="pageContainer"> 
@@ -24,4 +24,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default ReleasesPage;
