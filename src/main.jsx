@@ -9,6 +9,7 @@ import LoginPage from './pages/Login.jsx';
 import RegisterPage from './pages/Register.jsx';
 import RecoverPassPage from './pages/RecoverPass.jsx';
 import ShoppingCart from './pages/ShoppingCart.jsx';
+import Account from './pages/Account.jsx';
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/releases", element: <Releases /> },
       { path: "/popular", element: <Popular /> },
       { path: "/cart", element: <ShoppingCart /> },
+      { path: "/account", element: <Account /> },
     ],
   },
 ]);
