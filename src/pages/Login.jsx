@@ -5,6 +5,7 @@ import Input from '../components/common/Input/index';
 import Button from "../components/common/Button/index"; 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 
@@ -14,12 +15,17 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('tentativa de login:', { email, password });
     // Aqui você pode adicionar a lógica de autenticação
-    // Por exemplo, chamar uma API de login e lidar com a resposta
-    window.location.href = '/releases';
+     if (!email || !password) {
+      alert('Por favor, preencha todos os campos.'); // Informa o usuário
+      return; 
+    }
+    navigate('/releases');
     
   };
 

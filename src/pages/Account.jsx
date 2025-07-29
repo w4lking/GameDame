@@ -40,7 +40,7 @@ function Account() {
             </button>
           </div>
         </div>
-        
+
         <aside className={styles.gamesSidebar}>
           <h2>Jogos adquiridos:</h2>
           <div className={styles.gamesGrid}>
@@ -69,7 +69,7 @@ function Account() {
             </div>
 
           </div>
-        <FloatingButton><ShoppingCartIcon></ShoppingCartIcon></FloatingButton>
+        <FloatingButton className={styles.cartButton}><ShoppingCartIcon></ShoppingCartIcon></FloatingButton>
         </aside>
       </main>
     </div>
