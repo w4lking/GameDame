@@ -25,7 +25,7 @@ function LoginPage() {
       alert('Por favor, preencha todos os campos.'); // Informa o usuário
       return; 
     }
-    navigate('/releases');
+    navigate('/launch');
     
   };
 

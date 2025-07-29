@@ -1,8 +1,7 @@
-// 1. Importe as imagens dos jogos no carrinho
+
 import DeathStranding from "../assets/images/deathStrandingImage.png";
 import BobEsponja from "../assets/images/bobEsponjaImage.png";
 
-// 2. Crie e exporte o objeto com os dados do carrinho
 export const cartData = {
   items: [
     {
@@ -20,7 +19,6 @@ export const cartData = {
       imageUrl: DeathStranding,
     },
   ],
-  // Calcula o total dinamicamente
   get total() {
     return this.items.reduce((acc, item) => acc + item.price, 0);
   }
