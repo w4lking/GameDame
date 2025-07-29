@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer";
 import FloatingButton from "../components/common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-import { gamesData } from "../data/gamesData.js";
+import { gamesData } from "../data/popularGamesData.js";
 
 function Popular() {
   return (

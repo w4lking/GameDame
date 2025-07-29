@@ -1,15 +1,10 @@
-
 import Slider from "react-slick";
 import styles from "./CarrosselLaunch.module.css";
 import FloatingButton from "../common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-
-import BobEsponja from "../../assets/images/bobEsponjaImage.png";
-import DeliverUsMars from "../../assets/images/deliverUsMarsImage.png";
-import SpellForce from "../../assets/images/speelForceImage.png";
-import Perish from "../../assets/images/perishImage.png";
-import DeathStranding from "../../assets/images/deathStrandingImage.png";
+// 1. Importe APENAS a lista de dados
+import { launchGamesData } from "../../data/launchGamesData.js";
 
 export default function LancamentosCarousel() {
   const settingsLancamentos = {
@@ -39,31 +34,19 @@ export default function LancamentosCarousel() {
     <div className={styles.pageContainer}>
       <h2 className={styles.sectionTitle}>Lançamentos</h2>
       <Slider {...settingsLancamentos}>
-        <div className={styles.card}>
-          <img src={BobEsponja} alt="Jogo do Bob Esponja" />
-          <span className={styles.cardPrice}>R$ 299,00</span>
-        </div>
-        <div className={styles.card}>
-          <img src={DeliverUsMars} alt="Jogo Deliver Us Mars" />
-          <span className={styles.cardPrice}>R$ 299,00</span>
-        </div>
-        <div className={styles.card}>
-          <img src={SpellForce} alt="SpellForce" />
-          <span className={styles.cardPrice}>R$ 299,00</span>
-        </div>
-        <div className={styles.card}>
-          <img src={DeathStranding} alt="Death Stranding" />
-          <span className={styles.cardPrice}>R$ 299,00</span>
-        </div>
-        <div className={styles.card}>
-          <img src={Perish} alt="Perish" />
-          <span className={styles.cardPrice}>R$ 299,00</span>
-        </div>
+        {/* 2. Use .map() para criar um card para cada jogo */}
+        {launchGamesData.map((game) => (
+          <div key={game.id} className={styles.card}>
+            <img src={game.imageUrl} alt={game.title} />
+            <span className={styles.cardPrice}>{game.price}</span>
+          </div>
+        ))}
       </Slider>
 
       <FloatingButton
         className={styles.cartButton}
         aria-label="Ver carrinho"
+        to="/shopping-cart" // Adicionando o link
       >
         <ShoppingCartIcon />
       </FloatingButton>

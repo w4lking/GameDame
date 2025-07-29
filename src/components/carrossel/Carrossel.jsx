@@ -1,10 +1,10 @@
-
 import Slider from "react-slick";
 import styles from "./Carrossel.module.css";
 
-import Gow from "../../assets/images/gowImage.png";
-import DaysGone from "../../assets/images/daysGImage.png";
-import ZeroDown from "../../assets/images/zeroDownImage.png";
+import { bannerGamesData } from "../../data/bannerGamesData.js";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Carrossel() {
   const settingsBanner = {
@@ -21,29 +21,15 @@ export default function Carrossel() {
   return (
     <div className={styles.pageContainer}>
       <Slider {...settingsBanner}>
-        <div className={styles.slideBanner}>
-          <img src={Gow} alt="God of War" />
-          <div className={styles.overlay}>
-            <span className={styles.discount}>-40%</span>
-            <span className={styles.price}>R$ 119,95</span>
+        {bannerGamesData.map((game) => (
+          <div key={game.id} className={styles.slideBanner}>
+            <img src={game.imageUrl} alt={game.title} />
+            <div className={styles.overlay}>
+              <span className={styles.discount}>{game.discount}</span>
+              <span className={styles.price}>{game.price}</span>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.slideBanner}>
-          <img src={DaysGone} alt="Days Gone" />
-          <div className={styles.overlay}>
-            <span className={styles.discount}>-15%</span>
-            <span className={styles.price}>R$ 169,90</span>
-          </div>
-        </div>
-
-        <div className={styles.slideBanner}>
-          <img src={ZeroDown} alt="Horizon Zero Dawn" />
-          <div className={styles.overlay}>
-            <span className={styles.discount}>-25%</span>
-            <span className={styles.price}>R$ 149,99</span>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );
