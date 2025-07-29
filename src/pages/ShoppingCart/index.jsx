@@ -1,13 +1,19 @@
-
 import styles from './ShoppingCart.module.css';
-import NavBar from "../components/layout/NavBar";
+import NavBar from "../../components/layout/NavBar";
 
-import DeathStranding from "../assets/images/deathStrandingImage.png";
-import BobEsponja from "../assets/images/bobEsponjaImage.png";
-import Pix from "../assets/images/pixImage.png";
+// Ícones e imagens estáticas
+import Pix from "../../assets/images/pixImage.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+// 1. Importe APENAS os dados do carrinho
+import { cartData } from '../../data/cartData.js';
+
 function ShoppingCart() {
+  // Função para formatar o preço para o padrão brasileiro
+  const formatPrice = (value) => {
+    return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  };
+
   return (
     <div className="pageContainer">
       <NavBar />
@@ -15,27 +21,23 @@ function ShoppingCart() {
         <div className={styles.gridContainer}>
           <div className={styles.cartSection}>
             <h1 className={styles.sectionTitle}>Carrinho de Compras</h1>
-            <div className={styles.cartItem}>
-              <div className={styles.itemDetails}>
-                <h2>SpongeBob: Battle for BikiniBottom</h2>
-                <p className={styles.platform}>Plataforma: PC</p>
-                <p className={styles.price}>R$ 299,00</p>
+            
+            {/* 2. Use .map() para criar um item para cada jogo no carrinho */}
+            {cartData.items.map((item) => (
+              <div key={item.id} className={styles.cartItem}>
+                <div className={styles.itemDetails}>
+                  <h2>{item.title}</h2>
+                  <p className={styles.platform}>{item.platform}</p>
+                  <p className={styles.price}>{formatPrice(item.price)}</p>
+                </div>
+                <img src={item.imageUrl} alt={item.title} className={styles.itemImage} />
               </div>
-              <img src={BobEsponja} alt="Bob Esponja" className={styles.itemImage} />
-            </div>
+            ))}
 
-            <div className={styles.cartItem}>
-              <div className={styles.itemDetails}>
-                <h2>Death Stranding</h2>
-                <p className={styles.platform}>Plataforma: PC</p>
-                <p className={styles.price}>R$ 299,00</p>
-              </div>
-              <img src={DeathStranding} alt="Death Stranding" className={styles.itemImage} />
-            </div>
-
+            {/* 3. Use o total calculado dos dados */}
             <div className={styles.cartTotal}>
               <span>Total</span>
-              <span>R$ 598,00</span>
+              <span>{formatPrice(cartData.total)}</span>
             </div>
           </div>
 

@@ -1,10 +1,10 @@
 import styles from "./Popular.module.css";
-import NavBar from "../components/layout/NavBar";
-import Footer from "../components/layout/Footer";
-import FloatingButton from "../components/common/FloatingButton/index";
+import NavBar from "../../components/layout/NavBar.jsx";
+import Footer from "../../components/layout/Footer.jsx";
+import FloatingButton from "../../components/common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-import { gamesData } from "../data/popularGamesData.js";
+import { gamesData } from "../../data/popularGamesData.js";
 
 function Popular() {
   return (

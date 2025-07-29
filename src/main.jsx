@@ -3,13 +3,13 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
-import Releases from './pages/Releases.jsx';
-import Popular from './pages/Popular.jsx';
-import LoginPage from './pages/Login.jsx';
-import RegisterPage from './pages/Register.jsx';
-import RecoverPassPage from './pages/RecoverPass.jsx';
-import ShoppingCart from './pages/ShoppingCart.jsx';
-import Account from './pages/Account.jsx';
+import Launch from './pages/launch/index.jsx';
+import Popular from './pages/Popular/index.jsx';
+import LoginPage from './pages/Login/index.jsx';
+import RegisterPage from './pages/Register/index.jsx';
+import RecoverPassPage from './pages/RecoverPass/index.jsx';
+import ShoppingCart from './pages/ShoppingCart/index.jsx';
+import Account from './pages/Account/index.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage /> },
       { path: "/", element: <RegisterPage /> },
       { path: "/recover-password", element: <RecoverPassPage /> },
-      { path: "/releases", element: <Releases /> },
+      { path: "/launch", element: <Launch /> },
       { path: "/popular", element: <Popular /> },
       { path: "/cart", element: <ShoppingCart /> },
       { path: "/account", element: <Account /> },

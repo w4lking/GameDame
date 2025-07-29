@@ -3,8 +3,11 @@ import styles from "./CarrosselLaunch.module.css";
 import FloatingButton from "../common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-// 1. Importe APENAS a lista de dados
+
 import { launchGamesData } from "../../data/launchGamesData.js";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function LancamentosCarousel() {
   const settingsLancamentos = {

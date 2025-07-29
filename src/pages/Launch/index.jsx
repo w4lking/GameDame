@@ -1,10 +1,10 @@
-import NavBar from "../components/layout/NavBar.jsx";
-import Footer from "../components/layout/Footer.jsx";
-import Carrossel from "../components/carrossel/carrossel.jsx";
-import CarrosselLaunch from "../components/carrossel/CarrosselLaunch.jsx";
-import styles from "./Releases.module.css"; 
+import NavBar from "../../components/layout/NavBar.jsx";
+import Footer from "../../components/layout/Footer.jsx";
+import Carrossel from "../../components/carrossel/carrossel.jsx";
+import CarrosselLaunch from "../../components/carrossel/CarrosselLaunch.jsx";
+import styles from "./Launch.module.css"; 
 
-function ReleasesPage() {
+function LaunchPage() {
   return (
 
     <div className="pageContainer"> 
@@ -24,4 +24,4 @@ function ReleasesPage() {
   );
 }
 
-export default ReleasesPage;
+export default LaunchPage;
