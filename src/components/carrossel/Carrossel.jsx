@@ -1,39 +1,68 @@
 
-import Slider from "react-slick";
-import styles from "./Carrossel.module.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
-import { bannerGamesData } from "../../data/bannerGamesData.js";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import styles from './Carrossel.module.css';
+import { bannerSlidesData } from '../../data/bannerGamesData';
 
-export default function Carrossel() {
-  const settingsBanner = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    fade: true,
-    lazyLoad: 'ondemand',
-    accessibility: true,
-  };
-
+export default function BannerCarousel() {
   return (
-    <div className={styles.pageContainer}>
-      <Slider {...settingsBanner}>
-        {bannerGamesData.map((game) => (
-          <div key={game.id} className={styles.slideBanner}>
-            <img src={game.imageUrl} alt={game.title} />
-            <div className={styles.overlay}>
-              <span className={styles.discount}>{game.discount}</span>
-              <span className={styles.price}>{game.price}</span>
+    <div className={styles.carouselContainer}>
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        loop={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+      >
+        {bannerSlidesData.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className={styles.slideGrid}>
+              <div className={styles.leftColumn}>
+                <div className={styles.imageWrapper}>
+                  <Link to={slide.smallImage1.link} className={styles.imageLink}>
+                    <img src={slide.smallImage1.url} alt={slide.smallImage1.title} />
+                    <div className={styles.overlay}>
+                      <span className={styles.discount}>{slide.smallImage1.discount}</span>
+                      <span className={styles.price}>{slide.smallImage1.price}</span>
+                    </div>
+                  </Link>
+                </div>
+                <div className={styles.imageWrapper}>
+                  <Link to={slide.smallImage2.link} className={styles.imageLink}>
+                    <img src={slide.smallImage2.url} alt={slide.smallImage2.title} />
+                    <div className={styles.overlay}>
+                      <span className={styles.discount}>{slide.smallImage2.discount}</span>
+                      <span className={styles.price}>{slide.smallImage2.price}</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className={styles.rightColumn}>
+                <div className={styles.imageWrapper}>
+                  <Link to={slide.mainImage.link} className={styles.imageLink}>
+                    <img src={slide.mainImage.url} alt={slide.mainImage.title} />
+                    <div className={styles.overlay}>
+                      <span className={styles.discount}>{slide.mainImage.discount}</span>
+                      <span className={styles.price}>{slide.mainImage.price}</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </div>
   );
 }

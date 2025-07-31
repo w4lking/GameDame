@@ -11,8 +11,6 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   color: #FBF8F3;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
   padding-left: 10px;
   font-weight: 300;
 }
@@ -64,15 +62,15 @@
 /* -- Estilos para as setas -- */
 :global(.slick-arrow) {
   border-radius: 50%;
-  background-color: #333;
+  background-color: #ffffff;
   z-index: 1;
   width: 30px;
   height: 30px;
 }
 :global(.slick-arrow:hover) {
-  background-color: white !important;
+  background-color: rgb(0, 0, 0) !important;
 }
 
 :global(.slick-arrow::before) {
-  color: #333 !important;
+  color: #ffffff !important;
 }
