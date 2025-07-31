@@ -1,3 +1,4 @@
+
 import Slider from "react-slick";
 import styles from "./Carrossel.module.css";
 
@@ -16,6 +17,8 @@ export default function Carrossel() {
     autoplay: true,
     autoplaySpeed: 4000,
     fade: true,
+    lazyLoad: 'ondemand',
+    accessibility: true,
   };
 
   return (

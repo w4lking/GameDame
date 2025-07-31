@@ -1,18 +1,20 @@
 
 .pageContainer {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 5rem 2rem;
   box-sizing: border-box;
 }
 
-
 .slideBanner {
   position: relative;
   width: 100%;
-  height: 50%;
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: #1a1a1a;
 }
 
 .slideBanner img {
@@ -20,6 +22,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .slideBanner:hover img {
@@ -29,11 +32,14 @@
 .overlay {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   padding: 1rem;
   background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 12px;
   box-sizing: border-box;
 }
@@ -58,46 +64,45 @@
   color: #111;
 }
 
+
 :global(.slick-prev),
 :global(.slick-next) {
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.9)!important;
   border-radius: 50%;
   z-index: 10;
 }
 
 :global(.slick-prev:hover),
 :global(.slick-next:hover) {
-  background-color: #fff !important;
+  background-color: #fff!important;
 }
 
 :global(.slick-prev::before),
 :global(.slick-next::before) {
-  color: #333 !important;
+  color: #333!important;
   font-size: 24px;
 }
 
 :global(.slick-dots li button:before) {
   font-size: 10px;
   color: #aaa;
+  opacity: 0.75;
 }
 
 :global(.slick-dots li.slick-active button:before) {
   color: #4B626C;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .slideBanner {
-    height: 300px;
-  }
-
-  .discount, .price {
+ .discount,.price {
     font-size: 0.8rem;
     padding: 4px 10px;
   }
 
-  .overlay {
+ .overlay {
     padding: 0.5rem;
   }
 }

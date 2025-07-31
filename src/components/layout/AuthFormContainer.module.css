@@ -17,7 +17,7 @@
   font-weight: 500;
   color: #4B626C;
   margin-bottom: 3rem;
-  text-align: center; 
+  text-align: center;
 }
 
 .links {
@@ -40,6 +40,20 @@
   color: #000;
 }
 
+@media (max-width: 1030px) {
+  .title {
+    font-size: 33px; 
+  }
+
+  .links {
+    font-size: 0.2rem; 
+  }
+
+  .container {
+    margin-top: 8rem;
+  }
+}
+
 
 @media (max-width: 840px) {
   .title {
@@ -52,6 +66,7 @@
 
   .container {
     justify-content: space-around;
+    margin-top: 0;
   }
 }
 
@@ -74,9 +89,10 @@
 @media (max-width: 400px) {
   .container {
     width: 100%; 
-    padding: 1rem; 
+    padding: 0.5rem; 
     max-width: none; 
     justify-content: center;
+    margin-top: 2rem; 
   }
 
   .title {
@@ -85,31 +101,10 @@
   }
 
   .links {
-    font-size: 0.6rem; 
+    font-size: 0.6rem;
   }
     .links a {
         font-size: 15px; 
     }
-}
-
-/* ########## MEDIA QUERY PARA TELAS BAIXAS ########## */
-
-/* Aplica estas regras em qualquer dispositivo com ALTURA de 650px ou MENOR */
-@media (max-height: 650px) {
-  .container {
-    justify-content: flex-start; 
-    overflow-y: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .title {
-    font-size: clamp(1.8rem, 8vh, 2.5rem);
-    margin-bottom: 1.5rem;
-  }
-
-  .links {
-    margin-top: 1.2rem; 
-  }
 }
 

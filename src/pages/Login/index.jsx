@@ -22,7 +22,7 @@ function LoginPage() {
     console.log('tentativa de login:', { email, password });
     // Aqui você pode adicionar a lógica de autenticação
      if (!email || !password) {
-      alert('Por favor, preencha todos os campos.'); // Informa o usuário
+      alert('Por favor, preencha todos os campos.');
       return; 
     }
     navigate('/launch');
