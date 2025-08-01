@@ -19,9 +19,9 @@ export default function BannerCarousel() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        loop={false}
+        loop={true}
         autoplay={{
-          delay: 20000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
       >
@@ -30,7 +30,8 @@ export default function BannerCarousel() {
             <div className={styles.slideGrid}>
               <div className={styles.leftColumn}>
                 <div className={styles.imageWrapper}>
-                  <Link to={slide.smallImage1.link} className={styles.imageLink}>
+                  {/* Testando url dinâmica para construção do viewGame */}
+                  <Link to={`/game/${slide.smallImage1.id}`} className={styles.imageLink}>
                     <img src={slide.smallImage1.url} alt={slide.smallImage1.title} />
                     <div className={styles.overlay}>
                       <span className={styles.discount}>{slide.smallImage1.discount}</span>
@@ -39,7 +40,7 @@ export default function BannerCarousel() {
                   </Link>
                 </div>
                 <div className={styles.imageWrapper}>
-                  <Link to={slide.smallImage2.link} className={styles.imageLink}>
+                  <Link to={`/game/${slide.smallImage2.id}`} className={styles.imageLink}>
                     <img src={slide.smallImage2.url} alt={slide.smallImage2.title} />
                     <div className={styles.overlay}>
                       <span className={styles.discount}>{slide.smallImage2.discount}</span>
@@ -50,7 +51,7 @@ export default function BannerCarousel() {
               </div>
               <div className={styles.rightColumn}>
                 <div className={styles.imageWrapper}>
-                  <Link to={slide.mainImage.link} className={styles.imageLink}>
+                  <Link to={`/game/${slide.mainImage.id}`} className={styles.imageLink}>
                     <img src={slide.mainImage.url} alt={slide.mainImage.title} />
                     <div className={styles.overlay}>
                       <span className={styles.discount}>{slide.mainImage.discount}</span>
