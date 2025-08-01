@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import styles from "./Popular.module.css";
 import NavBar from "../../components/layout/NavBar/index.jsx";
 import Footer from "../../components/layout/Footer/index.jsx";
@@ -17,8 +19,10 @@ function Popular() {
           {gamesData.map((game) => (
             <div key={game.id} className={styles.gameRow}>
               <div className={styles.imageContainer}>
-                <span className={styles.rank}>{game.rank}</span>
-                <img src={game.imageUrl} alt={game.title} />
+                <Link to={`/game/${game.id}`}>
+                  <span className={styles.rank}>{game.rank}</span>
+                  <img src={game.url} alt={game.title} />
+                </Link>
               </div>
               <div className={styles.descriptionContainer}>
                 <h2>{game.title}</h2>
@@ -30,7 +34,8 @@ function Popular() {
           <FloatingButton
             className={styles.cartButton}
             aria-label="Ver carrinho"
-            to="/shopping-cart">
+            to="/shopping-cart"
+          >
             <ShoppingCartIcon />
           </FloatingButton>
         </div>

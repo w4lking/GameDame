@@ -20,7 +20,7 @@ function Footer() {
         <div className={styles.footerLinks}>
           <h2>Explorar</h2>
           <ul>
-            <li><a href="/home">Início</a></li>
+            <li><a href="/launch">Início</a></li>
             <li><a href="/popular">Populares</a></li>
             <li><a href="/account">Conta</a></li>
           </ul>

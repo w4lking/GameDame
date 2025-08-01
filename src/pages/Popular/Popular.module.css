@@ -36,11 +36,20 @@
   flex: 1; 
   min-width: 300px;
   position: relative;
+  
 }
 
 .imageContainer img {
   width: 100%;
   border-radius: 6px;
+  cursor: pointer;
+}
+
+.imageContainer:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.03);
+  border-radius: 6px;
+  box-shadow: 2px #8a2be2;
 }
 
 .rank {
