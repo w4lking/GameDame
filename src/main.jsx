@@ -3,13 +3,14 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
-import Launch from './pages/launch/index.jsx';
+import Launch from './pages/Launch/index.jsx';
 import Popular from './pages/Popular/index.jsx';
 import LoginPage from './pages/Login/index.jsx';
 import RegisterPage from './pages/Register/index.jsx';
 import RecoverPassPage from './pages/RecoverPass/index.jsx';
 import ShoppingCart from './pages/ShoppingCart/index.jsx';
 import Account from './pages/Account/index.jsx';
+import ViewGamePage from './pages/ViewGame/index.jsx';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "/popular", element: <Popular /> },
       { path: "/cart", element: <ShoppingCart /> },
       { path: "/account", element: <Account /> },
+      { path: "/viewGame", element: <ViewGamePage />},
     ],
   },
 ]);

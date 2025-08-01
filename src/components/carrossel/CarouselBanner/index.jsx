@@ -19,9 +19,9 @@ export default function BannerCarousel() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        loop={true}
+        loop={false}
         autoplay={{
-          delay: 4000,
+          delay: 20000,
           disableOnInteraction: false,
         }}
       >
