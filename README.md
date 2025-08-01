@@ -45,15 +45,26 @@ A aplicação conta com diversas funcionalidades e telas, implementadas de acord
 
 ## 📂 Estrutura de Pastas
 
-/src
-│
-├── /assets         # Imagens, fontes e arquivos estáticos
-├── /components     # Componentes reutilizáveis (common, layout, etc.)
-├── /data           # Dados mockados (.js)
-├── /pages          # Componentes de página
-│
-├── App.jsx         # Configuração de rotas
-└── main.jsx        # Ponto de entrada da aplicação
+O projeto é organizado seguindo uma arquitetura modular e escalável, separando claramente as responsabilidades de cada parte da aplicação.
+
+📦 GAMEDAME
+ ┣ 📂 public/              # Arquivos estáticos que não passam pelo processo de build
+ ┣ 📂 src/                 # Diretório principal do código-fonte
+ ┃   ┣ 📂 assets/          # Imagens, fontes, e outros recursos
+ ┃   ┃   ┗ 📂 images/
+ ┃   ┣ 📂 components/      # Componentes React reutilizáveis
+ ┃   ┃   ┣ 📂 carrossel/   # Componentes específicos de carrossel
+ ┃   ┃   ┣ 📂 common/      # Componentes genéricos (Button, Input, etc.)
+ ┃   ┃   ┗ 📂 layout/      # Componentes de estrutura (NavBar, Footer, etc.)
+ ┃   ┣ 📂 data/            # Arquivos de dados mockados (.js)
+ ┃   ┣ 📂 pages/           # Componentes que representam as páginas do site
+ ┃   ┣ 📜 App.css          # Estilos globais da aplicação
+ ┃   ┣ 📜 App.jsx          # Configuração de rotas e layout raiz
+ ┃   ┗ 📜 main.jsx         # Ponto de entrada da aplicação React
+ ┣ 📜 .gitignore          # Arquivos e pastas ignorados pelo Git
+ ┣ 📜 index.html          # Template HTML principal
+ ┣ 📜 package.json        # Dependências e scripts do projeto
+ ┗ 📜 README.md          # Documentação do projeto (este arquivo)
 
 ## Como Executar o Projeto
 
