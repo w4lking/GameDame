@@ -1,6 +1,6 @@
 import styles from "./Popular.module.css";
-import NavBar from "../../components/layout/NavBar.jsx";
-import Footer from "../../components/layout/Footer.jsx";
+import NavBar from "../../components/layout/NavBar/index.jsx";
+import Footer from "../../components/layout/Footer/index.jsx";
 import FloatingButton from "../../components/common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 

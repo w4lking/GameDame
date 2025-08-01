@@ -1,7 +1,8 @@
-import NavBar from "../../components/layout/NavBar.jsx";
-import Footer from "../../components/layout/Footer.jsx";
-import Carrossel from "../../components/carrossel/carrossel.jsx";
-import CarrosselLaunch from "../../components/carrossel/CarrosselLaunch.jsx";
+
+import NavBar from "../../components/layout/NavBar/index.jsx";
+import Footer from "../../components/layout/Footer/index.jsx";
+import Carrossel from "../../components/carrossel/CarouselBanner/index.jsx";
+import CarrosselLaunch from "../../components/carrossel/CarouselLaunch/index.jsx";
 import styles from "./Launch.module.css"; 
 
 function LaunchPage() {

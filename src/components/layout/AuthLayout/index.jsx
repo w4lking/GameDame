@@ -1,6 +1,6 @@
 
 import styles from './AuthLayout.module.css';
-import authImage from '../../assets/images/mago_image.png';
+import authImage from '../../../assets/images/mago_image.png';
 
 function AuthLayout({ children }) {
     return (

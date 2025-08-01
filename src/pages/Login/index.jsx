@@ -1,6 +1,6 @@
 
-import AuthLayout from '../../components/layout/AuthLayout';
-import AuthFormContainer from '../../components/layout/AuthFormContainer';
+import AuthLayout from '../../components/layout/AuthLayout/index.jsx';
+import AuthFormContainer from '../../components/layout/AuthFormContainer/index.jsx';
 import Input from '../../components/common/Input/index'; 
 import Button from "../../components/common/Button/index"; 
 import { useState } from 'react';
@@ -20,7 +20,7 @@ function LoginPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('tentativa de login:', { email, password });
-    // Aqui você pode adicionar a lógica de autenticação
+    // adicionar a lógica de autenticação
      if (!email || !password) {
       alert('Por favor, preencha todos os campos.');
       return; 

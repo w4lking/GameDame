@@ -3,7 +3,8 @@
   max-width: auto;
   margin: 0 auto;
   padding: 2rem 4rem;
-  position: relative; 
+  position: relative;
+  overflow-y: hidden; 
 }
 
 .carouselContainer :global(.swiper) {

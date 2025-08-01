@@ -1,5 +1,5 @@
 import styles from './Account.module.css';
-import NavBar from '../../components/layout/NavBar.jsx';
+import NavBar from '../../components/layout/NavBar/index.jsx';
 import FloatingButton from '../../components/common/FloatingButton/index.jsx';
 
 import EditIcon from '@mui/icons-material/Edit';

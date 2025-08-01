@@ -6,7 +6,7 @@ import Gow from "../assets/images/GodOfWarCard.png";
 
 // 2. Crie e exporte o objeto com os dados da conta
 export const accountData = {
-  userName: "Nome do Usuário",
+  userName: "Layon Walker",
   email: "nomeusuario@email.com",
   cpf: "123.456.789-00",
   acquiredGames: [

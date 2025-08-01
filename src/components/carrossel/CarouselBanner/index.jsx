@@ -7,8 +7,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import styles from './Carrossel.module.css';
-import { bannerSlidesData } from '../../data/bannerGamesData';
+import styles from './Carousel.module.css';
+import { bannerGamesData } from '../../../data/bannerGamesData';
 
 export default function BannerCarousel() {
   return (
@@ -25,7 +25,7 @@ export default function BannerCarousel() {
           disableOnInteraction: false,
         }}
       >
-        {bannerSlidesData.map((slide) => (
+        {bannerGamesData.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className={styles.slideGrid}>
               <div className={styles.leftColumn}>

@@ -1,5 +1,5 @@
 
-import logo from '../../assets/images/FooterLogo.png'; 
+import logo from '../../../assets/images/FooterLogo.png'; 
 import styles from './Footer.module.css';
 import MailIcon from '@mui/icons-material/Mail';
 import CallIcon from '@mui/icons-material/Call';

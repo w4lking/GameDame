@@ -1,11 +1,9 @@
 import styles from './ShoppingCart.module.css';
-import NavBar from "../../components/layout/NavBar";
+import NavBar from "../../components/layout/NavBar/index.jsx";
 
-// Ícones e imagens estáticas
 import Pix from "../../assets/images/pixImage.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-// 1. Importe APENAS os dados do carrinho
 import { cartData } from '../../data/cartData.js';
 
 function ShoppingCart() {
@@ -21,8 +19,6 @@ function ShoppingCart() {
         <div className={styles.gridContainer}>
           <div className={styles.cartSection}>
             <h1 className={styles.sectionTitle}>Carrinho de Compras</h1>
-            
-            {/* 2. Use .map() para criar um item para cada jogo no carrinho */}
             {cartData.items.map((item) => (
               <div key={item.id} className={styles.cartItem}>
                 <div className={styles.itemDetails}>
@@ -33,8 +29,6 @@ function ShoppingCart() {
                 <img src={item.imageUrl} alt={item.title} className={styles.itemImage} />
               </div>
             ))}
-
-            {/* 3. Use o total calculado dos dados */}
             <div className={styles.cartTotal}>
               <span>Total</span>
               <span>{formatPrice(cartData.total)}</span>

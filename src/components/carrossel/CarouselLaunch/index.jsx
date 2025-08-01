@@ -1,10 +1,11 @@
+
 import Slider from "react-slick";
-import styles from "./CarrosselLaunch.module.css";
-import FloatingButton from "../common/FloatingButton/index";
+import styles from "./CarouselLaunch.module.css";
+import FloatingButton from "../../common/FloatingButton/index";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 
-import { launchGamesData } from "../../data/launchGamesData.js";
+import { launchGamesData } from "../../../data/launchGamesData";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
