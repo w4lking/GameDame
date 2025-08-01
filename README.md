@@ -45,75 +45,15 @@ A aplicação conta com diversas funcionalidades e telas, implementadas de acord
 
 ## 📂 Estrutura de Pastas
 
-📦 GameDame
-┣ 📂 public ----------------------------- // Arquivos públicos acessíveis na aplicação (como index.html)
-┣ 📂 src -------------------------------- // Diretório principal do código-fonte
-┃ ┣ 📂 assets -------------------------- // Recursos estáticos como imagens, fontes, etc.
-┃ ┣ 📂 components ---------------------- // Componentes reutilizáveis da interface
-┃ ┃ ┣ 📂 carrossel --------------------- // Componentes de carrossel
-┃ ┃ ┃ ┣ 📂 CarouselBanner ------------- // Carrossel principal da HomePage
-┃ ┃ ┃ ┃ ┣ 📜 Carousel.module.css ------- // Estilos do banner principal
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx ------------------ // Lógica e JSX do componente
-┃ ┃ ┃ ┣ 📂 CarouselLaunch ------------- // Carrossel de lançamentos
-┃ ┃ ┃ ┃ ┣ 📜 CarouselLaunch.module.css - // Estilos do carrossel de lançamentos
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx ------------------ // Lógica e JSX do componente
-┃ ┃ ┣ 📂 common ------------------------ // Componentes genéricos reutilizáveis
-┃ ┃ ┃ ┣ 📂 Button ---------------------- // Botão padrão
-┃ ┃ ┃ ┃ ┣ 📜 Button.module.css ---------- // Estilização do botão
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx ------------------ // JSX do botão
-┃ ┃ ┃ ┣ 📂 FloatingButton ------------- // Botão flutuante (como carrinho de compras)
-┃ ┃ ┃ ┃ ┣ 📜 FloatingButton.module.css - // Estilos do botão flutuante
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx ------------------ // JSX do botão flutuante
-┃ ┃ ┃ ┣ 📂 Input ----------------------- // Campos de input de formulário
-┃ ┃ ┃ ┃ ┣ 📜 Input.module.css ----------- // Estilos dos inputs
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx ------------------ // JSX dos inputs
-┃ ┃ ┣ 📂 layout ------------------------ // Layouts estruturais da aplicação
-┃ ┃ ┃ ┣ 📂 AuthFormContainer ---------- // Layout de formulários de autenticação
-┃ ┃ ┃ ┃ ┣ 📜 AuthFormContainer.module.css
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┃ ┣ 📂 AuthLayout ----------------- // Layout geral para páginas de login/registro
-┃ ┃ ┃ ┃ ┣ 📜 AuthLayout.module.css
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┃ ┣ 📂 Footer --------------------- // Rodapé da aplicação
-┃ ┃ ┃ ┃ ┣ 📜 Footer.module.css
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┃ ┣ 📂 NavBar --------------------- // Barra de navegação principal
-┃ ┃ ┃ ┃ ┣ 📜 NavBar.module.css
-┃ ┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┣ 📂 data ---------------------------- // Dados mockados
-┃ ┃ ┣ 📜 accountGamesData.js
-┃ ┃ ┣ 📜 bannerGamesData.js
-┃ ┃ ┣ 📜 cartData.js
-┃ ┃ ┣ 📜 launchGamesData.js
-┃ ┃ ┣ 📜 popularGamesData.js
-┃ ┣ 📂 pages --------------------------- // Páginas principais da aplicação
-┃ ┃ ┣ 📂 Account ---------------------- // Página de conta do usuário
-┃ ┃ ┃ ┣ 📜 Account.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 Launch ----------------------- // Página de lançamentos
-┃ ┃ ┃ ┣ 📜 Launch.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 Login ------------------------ // Página de login
-┃ ┃ ┃ ┣ 📜 Login.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 Popular ---------------------- // Página de jogos populares
-┃ ┃ ┃ ┣ 📜 Popular.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 RecoverPass ------------------ // Página de recuperação de senha
-┃ ┃ ┃ ┣ 📜 RecoverPass.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 Register --------------------- // Página de registro de usuário
-┃ ┃ ┃ ┣ 📜 Register.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 ShoppingCart ----------------- // Página do carrinho de compras
-┃ ┃ ┃ ┣ 📜 ShoppingCart.module.css (não visível, mas presumido)
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┃ ┣ 📂 ViewGame --------------------- // Página de visualização detalhada de um jogo
-┃ ┃ ┃ ┣ 📜 ViewGame.module.css
-┃ ┃ ┃ ┣ 📜 index.jsx
-┃ ┣ 📜 App.jsx ------------------------- // Configuração de rotas e layout base da aplicação
-┃ ┣ 📜 App.css ------------------------- // Estilos globais
-┃ ┣ 📜 main.jsx ------------------------ // Ponto de entrada principal da aplicação React
+/src
+│
+├── /assets         # Imagens, fontes e arquivos estáticos
+├── /components     # Componentes reutilizáveis (common, layout, etc.)
+├── /data           # Dados mockados (.js)
+├── /pages          # Componentes de página
+│
+├── App.jsx         # Configuração de rotas
+└── main.jsx        # Ponto de entrada da aplicação
 
 ## Como Executar o Projeto
 
