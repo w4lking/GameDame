@@ -1,6 +1,7 @@
 
 import { useState } from 'react'; 
-import { Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
+
 import styles from './NavBar.module.css';
 import icone from '../../../assets/images/perfil_icone.png'; 
 import SearchIcon from '@mui/icons-material/Search'; 
@@ -10,18 +11,22 @@ import CloseIcon from '@mui/icons-material/Close';
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const getLink = ({ isActive }) => {
+    return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+  };
+
   return (
     <nav className={styles.navContainer}>
-      <Link to="/login" className={styles.logo}>
+      <NavLink to="/login" className={styles.logo}>
         <img src={icone} alt="Logotipo Game Dame" />
-      </Link>
+      </NavLink>
 
       <ul className={`${styles.navList} ${isMenuOpen ? styles.menuOpen : ''}`}>
-        <li><Link to="/launch" onClick={() => setIsMenuOpen(false)}>Lançamentos</Link></li>
-        <li><Link to="/popular" onClick={() => setIsMenuOpen(false)}>Populares</Link></li>
-        <li><Link to="/genres" onClick={() => setIsMenuOpen(false)}>Gêneros</Link></li>
-        <li><Link to="/promotions" onClick={() => setIsMenuOpen(false)}>Promoções</Link></li>
-        <li><Link to="/account" onClick={() => setIsMenuOpen(false)}>Conta</Link></li>
+        <li><NavLink className={getLink} to="/launch" onClick={() => setIsMenuOpen(false)}>Lançamentos</NavLink></li>
+        <li><NavLink className={getLink} to="/popular" onClick={() => setIsMenuOpen(false)}>Populares</NavLink></li>
+        <li><NavLink className={getLink} to="/genres" onClick={() => setIsMenuOpen(false)}>Gêneros</NavLink></li>
+        <li><NavLink className={getLink} to="/promotions" onClick={() => setIsMenuOpen(false)}>Promoções</NavLink></li>
+        <li><NavLink className={getLink} to="/account" onClick={() => setIsMenuOpen(false)}>Conta</NavLink></li>
       </ul>
 
       <div className={styles.searchBar}>

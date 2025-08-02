@@ -38,7 +38,7 @@
   font-size: 25px;
 }
 
-/* barra separadora, menos no último */
+
 .navList li:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -58,6 +58,25 @@
 .navList a:hover {
   color: #8a2be2;
 }
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #8a2be2;
+  transition: width 0.3s ease;
+
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
 
 .searchBar {
   display: flex;
