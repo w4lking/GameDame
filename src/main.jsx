@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       { path: "/popular", element: <Popular /> },
       { path: "/cart", element: <ShoppingCart /> },
       { path: "/account", element: <Account /> },
-      { path: "/viewGame", element: <ViewGamePage />},
+      { path: "/game", element: <ViewGamePage />},
       { path: "/game/:gameID", element: <ViewGamePage />},
     ],
   },

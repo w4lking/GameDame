@@ -52,12 +52,6 @@
   transition: opacity 0.2s ease;
 }
 
-.cartButton {
-  position: fixed;
-  bottom: 2rem;
-  right: 1rem;
-  z-index: 100;
-}
 
 /* -- Estilos para as setas -- */
 :global(.slick-arrow) {

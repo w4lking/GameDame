@@ -1,10 +1,9 @@
-// 1. Importe as imagens dos jogos
+
 import DeathStranding from "../assets/images/deathStrandingImage.png";
 import BobEsponja from "../assets/images/bobEsponjaImage.png";
 import DeliverUsMars from "../assets/images/deliverUsMarsImage.png";
 import Gow from "../assets/images/GodOfWarCard.png";
 
-// 2. Crie e exporte o objeto com os dados da conta
 export const accountData = {
   userName: "Layon Walker",
   email: "nomeusuario@email.com",

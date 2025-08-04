@@ -1,14 +1,12 @@
 
 import Slider from "react-slick";
-import styles from "./CarouselLaunch.module.css";
-import FloatingButton from "../../common/FloatingButton/index";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 import { launchGamesData } from "../../../data/launchGamesData";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import styles from "./CarouselLaunch.module.css";
 
 export default function LancamentosCarousel() {
   const settingsLancamentos = {
@@ -46,14 +44,6 @@ export default function LancamentosCarousel() {
           </div>
         ))}
       </Slider>
-
-      <FloatingButton
-        className={styles.cartButton}
-        aria-label="Ver carrinho"
-        to="/shopping-cart" // Adicionando o link
-      >
-        <ShoppingCartIcon />
-      </FloatingButton>
     </div>
   );
 }

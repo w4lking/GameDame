@@ -1,13 +1,15 @@
 
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { Link } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import styles from './Carousel.module.css';
+
+
 import { bannerGamesData } from '../../../data/bannerGamesData';
 
 export default function BannerCarousel() {

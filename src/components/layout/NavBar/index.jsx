@@ -1,12 +1,13 @@
 
 import { useState } from 'react'; 
 import { NavLink} from 'react-router-dom';
-
-import styles from './NavBar.module.css';
-import icone from '../../../assets/images/perfil_icone.png'; 
 import SearchIcon from '@mui/icons-material/Search'; 
 import MenuIcon from '@mui/icons-material/Menu'; 
 import CloseIcon from '@mui/icons-material/Close'; 
+
+import icone from '../../../assets/images/perfil_icone.png'; 
+
+import styles from './NavBar.module.css';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

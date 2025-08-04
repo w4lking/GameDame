@@ -1,18 +1,17 @@
 
-import styles from './AuthLayout.module.css';
-import authImage from '../../../assets/images/mago_image.png';
+import authImage from "../../../assets/images/mago_image.png";
+
+import styles from "./AuthLayout.module.css";
 
 function AuthLayout({ children }) {
-    return (
-        <div className={styles.authContainer}>
-            <div className={styles.authFormSection}>
-                {children}
-            </div>
-            <div className={styles.authImageSection}>
-                <img src={authImage} alt="Imagem de Mago" />
-            </div>
+  return (
+    <div className={styles.authContainer}>
+      <div className={styles.authFormSection}>{children}</div>
+        <div className={styles.authImageSection}>
+          <img src={authImage} alt="Imagem de Mago" />
         </div>
-    );
+    </div>
+  );
 }
 
 export default AuthLayout;

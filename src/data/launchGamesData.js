@@ -34,6 +34,6 @@ export const launchGamesData = [
     id: "launch-5",
     title: "Perish",
     imageUrl: Perish,
-    price: "R$ 124,00",
+    price: "R$ 299,00",
   },
 ];

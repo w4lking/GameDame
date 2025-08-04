@@ -1,9 +1,11 @@
 
-import logo from '../../../assets/images/FooterLogo.png'; 
-import styles from './Footer.module.css';
 import MailIcon from '@mui/icons-material/Mail';
 import CallIcon from '@mui/icons-material/Call';
 import PlaceIcon from '@mui/icons-material/Place';
+
+import logo from '../../../assets/images/FooterLogo.png'; 
+
+import styles from './Footer.module.css';
 
 function Footer() {
   return (

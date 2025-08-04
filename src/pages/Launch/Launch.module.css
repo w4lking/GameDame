@@ -10,3 +10,11 @@
   flex: 1; 
   min-width: 400px; 
 }
+
+.cartButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  z-index: 100;
+}
+

@@ -1,13 +1,13 @@
-import styles from './ShoppingCart.module.css';
-import NavBar from "../../components/layout/NavBar/index.jsx";
 
-import Pix from "../../assets/images/pixImage.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+import NavBar from "../../components/layout/NavBar/index.jsx";
+import Pix from "../../assets/images/pixImage.png";
 import { cartData } from '../../data/cartData.js';
 
+import styles from './ShoppingCart.module.css';
+
 function ShoppingCart() {
-  // Função para formatar o preço para o padrão brasileiro
   const formatPrice = (value) => {
     return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   };
