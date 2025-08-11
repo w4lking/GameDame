@@ -36,7 +36,6 @@ export default function LancamentosCarousel() {
     <div className={styles.pageContainer}>
       <h2 className={styles.sectionTitle}>Lançamentos</h2>
       <Slider {...settingsLancamentos}>
-        {/* 2. Use .map() para criar um card para cada jogo */}
         {launchGamesData.map((game) => (
           <div key={game.id} className={styles.card}>
             <img src={game.imageUrl} alt={game.title} />

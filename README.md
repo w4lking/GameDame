@@ -1,4 +1,4 @@
-# Game Dame - Landing Page de E-commerce de Jogos
+# Game Dame - Landing Page de Jogos digitais
 
 Bem-vindo ao repositório do projeto **Game Dame**!  
 Esta é uma aplicação web desenvolvida como parte do processo trainee da **Emakers Jr.**, seguindo a trilha de Front-end.  
@@ -7,7 +7,6 @@ O objetivo foi construir uma interface de e-commerce de jogos, utilizando **Reac
 ---
 
 ## Tecnologias Utilizadas
-
 Este projeto foi construído com as seguintes tecnologias e bibliotecas:
 
 - **React** – Biblioteca principal para a construção da interface de usuário.

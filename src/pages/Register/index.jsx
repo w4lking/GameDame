@@ -28,13 +28,13 @@ function RegisterPage() {
       alert('Por favor, preencha todos os campos.'); 
       return; 
     }
-    navigate('/login');
+    navigate('/');
   };
   
 
   const pageLinks = (
     <>
-      <Link to="/login">Fazer login</Link>
+      <Link to="/">Fazer login</Link>
     </>
   );
 

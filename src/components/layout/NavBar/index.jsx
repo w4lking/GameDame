@@ -18,7 +18,7 @@ function NavBar() {
 
   return (
     <nav className={styles.navContainer}>
-      <NavLink to="/login" className={styles.logo}>
+      <NavLink to="/" className={styles.logo}>
         <img src={icone} alt="Logotipo Game Dame" />
       </NavLink>
 

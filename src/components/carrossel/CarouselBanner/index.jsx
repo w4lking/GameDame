@@ -1,3 +1,4 @@
+// src/components/carrossel/BannerCarousel.jsx
 
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,61 +9,89 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import styles from './Carousel.module.css';
-
-
 import { bannerGamesData } from '../../../data/bannerGamesData';
+import useWindowSize from '../../hooks/useWindowSize'; // 1. Importe o hook
 
 export default function BannerCarousel() {
+  const { width } = useWindowSize(); // 2. Obtenha a largura da tela
+  const isMobile = width <= 768;    // 3. Defina o que é "mobile"
+
+  // 4. Transforme os dados para o mobile
+  const mobileSlides = bannerGamesData.flatMap(slide => [
+    slide.smallImage1,
+    slide.smallImage2,
+    slide.mainImage,
+  ]);
+  
+  // 5. Escolha quais dados usar com base no tamanho da tela
+  const slidesToRender = isMobile ? mobileSlides : bannerGamesData;
+
+  const swiperSettings = {
+    modules: [Navigation, Pagination, Autoplay],
+    spaceBetween: isMobile ? 20 : 50,
+    slidesPerView: 1,
+    navigation: !isMobile, // Oculta as setas no mobile
+    pagination: { clickable: true },
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  };
+
   return (
     <div className={styles.carouselContainer}>
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        loop={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-      >
-        {bannerGamesData.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <div className={styles.slideGrid}>
-              <div className={styles.leftColumn}>
-                <div className={styles.imageWrapper}>
-                  {/* Testando url dinâmica para construção do viewGame */}
-                  <Link to={`/game/${slide.smallImage1.id}`} className={styles.imageLink}>
-                    <img src={slide.smallImage1.url} alt={slide.smallImage1.title} />
-                    <div className={styles.overlay}>
-                      <span className={styles.discount}>{slide.smallImage1.discount}</span>
-                      <span className={styles.price}>{slide.smallImage1.price}</span>
-                    </div>
-                  </Link>
+      <Swiper {...swiperSettings} key={isMobile ? 'mobile' : 'desktop'}>
+        {slidesToRender.map((slideData, index) => (
+          <SwiperSlide key={isMobile ? slideData.id : slideData.id + index}>
+            {/* 6. Renderização condicional */}
+            {isMobile ? (
+              // --- SLIDE PARA MOBILE ---
+              <div className={styles.mobileSlide}>
+                <Link to={`/game/${slideData.id}`} className={styles.imageLink}>
+                  <img src={slideData.url} alt={slideData.title} />
+                  <div className={styles.overlay}>
+                    <span className={styles.discount}>{slideData.discount}</span>
+                    <span className={styles.price}>{slideData.price}</span>
+                  </div>
+                </Link>
+              </div>
+            ) : (
+              // --- SLIDE PARA DESKTOP ---
+              <div className={styles.slideGrid}>
+                <div className={styles.leftColumn}>
+                  <div className={styles.imageWrapper}>
+                    <Link to={`/game/${slideData.smallImage1.id}`} className={styles.imageLink}>
+                      <img src={slideData.smallImage1.url} alt={slideData.smallImage1.title} />
+                      <div className={styles.overlay}>
+                        <span className={styles.discount}>{slideData.smallImage1.discount}</span>
+                        <span className={styles.price}>{slideData.smallImage1.price}</span>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className={styles.imageWrapper}>
+                    <Link to={`/game/${slideData.smallImage2.id}`} className={styles.imageLink}>
+                      <img src={slideData.smallImage2.url} alt={slideData.smallImage2.title} />
+                      <div className={styles.overlay}>
+                        <span className={styles.discount}>{slideData.smallImage2.discount}</span>
+                        <span className={styles.price}>{slideData.smallImage2.price}</span>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
-                <div className={styles.imageWrapper}>
-                  <Link to={`/game/${slide.smallImage2.id}`} className={styles.imageLink}>
-                    <img src={slide.smallImage2.url} alt={slide.smallImage2.title} />
-                    <div className={styles.overlay}>
-                      <span className={styles.discount}>{slide.smallImage2.discount}</span>
-                      <span className={styles.price}>{slide.smallImage2.price}</span>
-                    </div>
-                  </Link>
+                <div className={styles.rightColumn}>
+                  <div className={styles.imageWrapper}>
+                    <Link to={`/game/${slideData.mainImage.id}`} className={styles.imageLink}>
+                      <img src={slideData.mainImage.url} alt={slideData.mainImage.title} />
+                      <div className={styles.overlay}>
+                        <span className={styles.discount}>{slideData.mainImage.discount}</span>
+                        <span className={styles.price}>{slideData.mainImage.price}</span>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className={styles.rightColumn}>
-                <div className={styles.imageWrapper}>
-                  <Link to={`/game/${slide.mainImage.id}`} className={styles.imageLink}>
-                    <img src={slide.mainImage.url} alt={slide.mainImage.title} />
-                    <div className={styles.overlay}>
-                      <span className={styles.discount}>{slide.mainImage.discount}</span>
-                      <span className={styles.price}>{slide.mainImage.price}</span>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

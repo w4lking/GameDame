@@ -31,7 +31,7 @@ function LoginPage() {
 
   const pageLinks = (
     <>
-    <Link to="/">Criar Conta</Link>
+    <Link to="/register">Criar Conta</Link>
     <Link to="/recover-password">Esqueceu a Senha?</Link>
     </>
   );

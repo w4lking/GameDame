@@ -59,7 +59,7 @@ function ViewGamePage() {
           <Grow in={isLoaded} timeout={700}>
             <div className={styles.gameRow}>
               <div className={styles.imageContainer}>
-                <span className={styles.rank}>{game.discount || game.rank || "★"}</span>
+                <span className={styles.rank}>{game.discount || "★"}</span>
                 <img src={game.url} alt={game.title} />
                 <div className={styles.priceOverlay}>
                   <span className={styles.price}>{game.price}</span>
