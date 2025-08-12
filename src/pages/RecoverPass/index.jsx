@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import AuthLayout from '../../components/layout/AuthLayout';
@@ -13,15 +14,25 @@ import styles from './RecoverPass.module.css';
 function RecoverPass() {
   const [email, setEmail] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('tentativa de recuperação de senha:', { email });
+
+    if (!email) {
+      alert('Por favor, preencha o campo.');
+      return; 
+    }
+    alert('Sucesso!');
+    
+    navigate('/');
   };
 
   const pageLinks = (
     <>
-      <Link to="/">Criar Conta</Link>
-      <Link to="/login">Fazer login</Link>
+      <Link to="/register">Criar Conta</Link>
+      <Link to="/">Fazer login</Link>
     </>
   );
 
