@@ -20,10 +20,6 @@ function RecoverPass() {
     event.preventDefault();
     console.log('tentativa de recuperação de senha:', { email });
 
-    if (!email) {
-      alert('Por favor, preencha o campo.');
-      return; 
-    }
     alert('Sucesso!');
     
     navigate('/');
@@ -40,7 +36,7 @@ function RecoverPass() {
     <AuthLayout>
       <AuthFormContainer title="Recuperar Senha" links={pageLinks}>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <Button type="submit" className={styles.submitButton}>
             <ArrowForwardIcon fontSize="large" />
           </Button>
