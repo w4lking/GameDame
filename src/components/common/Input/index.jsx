@@ -1,14 +1,12 @@
 
 import styles from './Input.module.css'; 
 
-function Input({ type = 'text', placeholder = '', value, onChange, className = '' }) {
+function Input({ type = 'text', className = '', ...rest }) {
   return (
     <input
       type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
       className={`${styles.input} ${className}`} 
+      {...rest}
     />
   );
 }

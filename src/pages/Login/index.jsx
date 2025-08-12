@@ -20,13 +20,8 @@ function LoginPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('tentativa de login:', { email, password });
-    // adicionar a lógica de autenticação
-     if (!email || !password) {
-      alert('Por favor, preencha todos os campos.');
-      return; 
-    }
+
     navigate('/launch');
-    
   };
 
   const pageLinks = (
@@ -40,8 +35,8 @@ function LoginPage() {
     <AuthLayout>
       <AuthFormContainer title="Login" links={pageLinks}>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <Input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required />
           
           <Button type="submit" className={styles.submitButton}>
             <ArrowForwardIcon fontSize="large" />

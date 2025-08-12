@@ -24,7 +24,7 @@ function RegisterPage() {
     event.preventDefault();
     console.log('tentativa de registro:', { name, email, cpf, password, confirmPassword });
 
-    if (!name || !email || !cpf ||!password || !confirmPassword) {
+    if (!name || !email || !cpf || !password || !confirmPassword) {
       alert('Por favor, preencha todos os campos.'); 
       return; 
     }
