@@ -1,4 +1,3 @@
-// src/components/carrossel/BannerCarousel.jsx
 
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,20 +9,19 @@ import 'swiper/css/pagination';
 
 import styles from './Carousel.module.css';
 import { bannerGamesData } from '../../../data/bannerGamesData';
-import useWindowSize from '../../hooks/useWindowSize'; // 1. Importe o hook
+import useWindowSize from '../../hooks/useWindowSize'; 
 
 export default function BannerCarousel() {
-  const { width } = useWindowSize(); // 2. Obtenha a largura da tela
-  const isMobile = width <= 768;    // 3. Defina o que é "mobile"
+  const { width } = useWindowSize();
+  const isMobile = width <= 768;
 
-  // 4. Transforme os dados para o mobile
   const mobileSlides = bannerGamesData.flatMap(slide => [
     slide.smallImage1,
     slide.smallImage2,
     slide.mainImage,
   ]);
   
-  // 5. Escolha quais dados usar com base no tamanho da tela
+  // Escolha quais dados usar com base no tamanho da tela
   const slidesToRender = isMobile ? mobileSlides : bannerGamesData;
 
   const swiperSettings = {
@@ -44,7 +42,6 @@ export default function BannerCarousel() {
       <Swiper {...swiperSettings} key={isMobile ? 'mobile' : 'desktop'}>
         {slidesToRender.map((slideData, index) => (
           <SwiperSlide key={isMobile ? slideData.id : slideData.id + index}>
-            {/* 6. Renderização condicional */}
             {isMobile ? (
               // --- SLIDE PARA MOBILE ---
               <div className={styles.mobileSlide}>

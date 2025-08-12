@@ -1,4 +1,6 @@
 
+import { useState, useEffect } from "react";
+import { Grow } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import NavBar from "../../components/layout/NavBar/index.jsx";
@@ -12,10 +14,18 @@ function ShoppingCart() {
     return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   };
 
+  const [isLoaded, setIsLoaded] = useState(false);
+      
+  useEffect(() => {
+      const timer = setTimeout(() => setIsLoaded(true), 100);
+      return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="pageContainer">
       <NavBar />
       <main className="mainContent">
+        <Grow in={isLoaded} timeout={700}>
         <div className={styles.gridContainer}>
           <div className={styles.cartSection}>
             <h1 className={styles.sectionTitle}>Carrinho de Compras</h1>
@@ -58,7 +68,8 @@ function ShoppingCart() {
               <ShoppingCartIcon fontSize="small" />
             </button>
           </div>
-        </div>
+          </div>
+        </Grow>
       </main>
     </div>
   );

@@ -71,6 +71,23 @@
 }
 
 
+/* Para tablets */
+@media (max-width: 785px){
+  .container {
+    width: 100%; 
+    padding: 0.5rem; 
+    max-width: none; 
+    justify-content: center;
+    margin-top: 5.5rem; 
+  }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 1rem; 
+  }
+}
+
+
 @media (max-width: 500px) {
   .title {
     font-size: 28px; 

@@ -11,6 +11,8 @@ import RecoverPassPage from './pages/RecoverPass/index.jsx';
 import ShoppingCart from './pages/ShoppingCart/index.jsx';
 import Account from './pages/Account/index.jsx';
 import ViewGamePage from './pages/ViewGame/index.jsx';
+import PromotionsPage from './pages/Promotions/index.jsx';
+import GenresPage from './pages/Genres/index.jsx';
 
 
 const router = createBrowserRouter([
@@ -23,6 +25,8 @@ const router = createBrowserRouter([
       { path: "/recover-password", element: <RecoverPassPage /> },
       { path: "/launch", element: <Launch /> },
       { path: "/popular", element: <Popular /> },
+      { path: "/genres", element: <GenresPage /> },
+      { path: "/promotions", element: <PromotionsPage /> },
       { path: "/cart", element: <ShoppingCart /> },
       { path: "/account", element: <Account /> },
       { path: "/game", element: <ViewGamePage />},
