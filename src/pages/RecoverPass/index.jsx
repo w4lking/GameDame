@@ -6,7 +6,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import AuthLayout from '../../components/layout/AuthLayout';
 import AuthFormContainer from '../../components/layout/AuthFormContainer'; 
-import Input from '../../components/common/Input/index'; 
+import Input from '../../components/common/Input/CommonInput/index'; 
 import Button from "../../components/common/Button/index"; 
 
 import styles from './RecoverPass.module.css'; 

@@ -6,7 +6,8 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import AuthLayout from '../../components/layout/AuthLayout';
 import AuthFormContainer from '../../components/layout/AuthFormContainer'; 
-import Input from '../../components/common/Input/index'; 
+import Input from '../../components/common/Input/CommonInput/index'; 
+import PasswordInput from '../../components/common/Input/PasswordInput/index.jsx'
 import Button from "../../components/common/Button/index"; 
 
 import styles from './Register.module.css'; 
@@ -46,8 +47,8 @@ function RegisterPage() {
           <Input placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} required />
           <Input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <Input type="number" placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)} required />
-          <Input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required />
-          <Input type="password" placeholder="Confirmar Senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+          <PasswordInput placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <PasswordInput placeholder="Confirmar senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
           
           <Button type="submit" className={styles.submitButton}>
             <ArrowForwardIcon fontSize="large" />

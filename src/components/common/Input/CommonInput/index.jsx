@@ -1,7 +1,8 @@
 
-import styles from './Input.module.css'; 
+import styles from './CommonInput.module.css'; 
 
 function Input({ type = 'text', className = '', ...rest }) {
+
   return (
     <input
       type={type}
