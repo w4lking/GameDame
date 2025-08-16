@@ -1,4 +1,4 @@
-# Game Dame - Landing Page de Jogos digitais
+# Game Dame - Aplicação para o E-commerce de Jogos digitais
 
 Bem-vindo ao repositório do projeto **Game Dame**!  
 Esta é uma aplicação web desenvolvida como parte do processo trainee da **Emakers Jr.**, seguindo a trilha de Front-end.  
@@ -24,6 +24,8 @@ Este projeto foi construído com as seguintes tecnologias e bibliotecas:
 
 A aplicação conta com diversas funcionalidades e telas, implementadas de acordo com os requisitos do processo trainee:
 
+
+
 ### Múltiplas Páginas
 
 - **Autenticação** – Telas de Login, Registro e Recuperação de Senha.
@@ -35,7 +37,7 @@ A aplicação conta com diversas funcionalidades e telas, implementadas de acord
 
 ### Outros Recursos
 
-- **Componentização** – Interface modular com componentes reutilizáveis (`Button`, `Input`, `Footer`, `NavBar`, `FloatingButton`, `Form`).
+- **Componentização** – Interface modular com componentes reutilizáveis (`Button`, `Input`, `Password Input`, `Footer`, `NavBar`, `FloatingButton`, `Form`).
 - **Dados Mockados** – Simulação de uma API real com dados separados da lógica visual.
 - **Design Responsivo** – Totalmente adaptável a dispositivos móveis e telas maiores.
 - **Navegação Dinâmica** – Roteamento dinâmico com `/game/:gameId`.
