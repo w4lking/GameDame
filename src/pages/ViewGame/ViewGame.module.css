@@ -96,6 +96,19 @@
   justify-content: center;
 }
 
+.buttonGroup button:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.buttonGroup button:disabled:hover {
+  color: #666666;
+  background-color: #cccccc; ;
+}
+
+
+
 .buttonGroup button:hover {
   background-color: #eeeeee;
 }

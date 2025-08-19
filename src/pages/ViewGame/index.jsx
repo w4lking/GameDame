@@ -70,7 +70,7 @@ function ViewGamePage() {
                 <p>{game.description || 'Descrição não disponível.'}</p>
                 <div className={styles.buttonGroup}>
                   <button>Adicionar ao Carrinho 🛒</button>
-                  <button>Solicitar Reembolso</button>
+                  <button disabled="true" >Solicitar Reembolso 🔒</button>
                 </div>
               </div>
             </div>
