@@ -46,7 +46,7 @@ A aplicação conta com diversas funcionalidades e telas, implementadas de acord
 
 ## Vizualizar projeto
 
-cê pode visualizar o projeto em produção no seguinte link logo abaixo:
+você pode visualizar o projeto no seguinte link logo abaixo:
 
 [Acessar demonstração](https://game-dame.vercel.app/)
 
