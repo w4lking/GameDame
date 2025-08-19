@@ -44,7 +44,15 @@ A aplicação conta com diversas funcionalidades e telas, implementadas de acord
 
 ---
 
-## Como Executar o Projeto
+## Vizualizar projeto
+
+cê pode visualizar o projeto em produção no seguinte link logo abaixo:
+
+[Acessar demonstração](https://game-dame.vercel.app/)
+
+---
+
+## Como Executar o Projeto localmente
 
 1. Clonar a última versão do projeto: 
 
