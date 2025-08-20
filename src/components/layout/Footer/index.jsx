@@ -7,6 +7,12 @@ import logo from '../../../assets/images/FooterLogo.png';
 
 import styles from './Footer.module.css';
 
+const footerDados = {
+  email: "gamedame@teste.com",
+  telefone: "(99) 9 9999-9999",
+  place: "Shopping X, Lavras - MG",
+}
+
 function Footer() {
   return (
     <footer className={styles.footer}>
@@ -31,10 +37,9 @@ function Footer() {
         <div className={styles.footerContact}>
           <h2 className={styles.footerContactTitle}>Contato</h2>
           <ul>
-
-            <li><MailIcon fontSize="s" /><a href="mailto:"> gamedame@teste.com</a></li>
-            <li><CallIcon fontSize="s" /> <a href="tel:">(99) 9 9999-9999</a></li>
-            <li><PlaceIcon fontSize="s" /> Shopping X, Lavras - MG</li>
+            <li><MailIcon fontSize="s" /><a href="mailto:"> {footerDados.email}</a></li>
+            <li><CallIcon fontSize="s" /> <a href="tel:"> {footerDados.telefone }</a></li>
+            <li><PlaceIcon fontSize="s" /> {footerDados.place }</li>
           </ul>
         </div>
       </div>
