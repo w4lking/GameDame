@@ -29,7 +29,7 @@ A aplicação conta com diversas funcionalidades e telas, implementadas de acord
 ### Múltiplas Páginas
 
 - **Autenticação** – Telas de Login, Registro e Recuperação de Senha.
-- **HomePage** – Página principal com banners e listas de jogos.
+- **Lançamentos** – Página principal com banners e listas de jogos.
 - **Populares** – Lista de jogos mais populares com layout alternado.
 - **Visualização de Jogo** – Página de detalhes com informações dinâmicas.
 - **Carrinho de Compras** – Tela de checkout com resumo e pagamento.
